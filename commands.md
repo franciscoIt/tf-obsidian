@@ -13,7 +13,7 @@
 
 ## Useful commands
 
-```terraform
+```json
 # Plan and apply in one shot (non-interactive)
 terraform plan -out=tfplan && terraform apply -auto-approve tfplan
 
