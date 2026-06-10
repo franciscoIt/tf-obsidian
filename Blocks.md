@@ -1,3 +1,5 @@
+# Blocks
+
 [[resource]]   ████████████████████  daily
 [[variable]]   ██████████████        daily
 [[output]]     ████████              frequent
@@ -11,6 +13,9 @@
 [[removed]]    ██                    deprecation
 [[check]]      █                     advanced validation
 
+## HCL Syntax
+
+![[Pasted image 20260608093251.png]]
 ## Quick Syntax Reference
 ```json
 # Two labels
