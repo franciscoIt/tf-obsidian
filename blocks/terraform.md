@@ -7,4 +7,5 @@
 - back end configuration. ex: terraform state location.
 - 
 
-![[www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54411581 (4).png]]
+![[terraform-block.png]]
+![[terraform-folder-structure.png]]

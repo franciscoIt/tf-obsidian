@@ -7,9 +7,12 @@
 [[plan]]
 [[apply]]
 [[destroy]]
-[[states]]
+[[commands/state]]
 [[import]]
 [[show output]]
+[[workspace]]
+
+
 
 ## Useful commands
 

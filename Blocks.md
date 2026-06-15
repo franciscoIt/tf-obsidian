@@ -15,7 +15,7 @@
 
 ## HCL Syntax
 
-![[Pasted image 20260608093251.png]]
+![[hcl-syntax.png]]
 ## Quick Syntax Reference
 ```json
 # Two labels

@@ -4,81 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "b41e019a0073105b",
+        "id": "7ad9abed198f4f24",
         "type": "tabs",
         "children": [
           {
-            "id": "00ae869cc9a4eba7",
+            "id": "2d335c53da543eaf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Blocks.md",
+                "file": "commands/workspace.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Blocks"
-            }
-          },
-          {
-            "id": "648a227f9cc2c19d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Blocks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Blocks"
-            }
-          },
-          {
-            "id": "b5b5d0f83969be46",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "for_each.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "for_each"
-            }
-          },
-          {
-            "id": "46af71964ad860f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "count.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "count"
-            }
-          },
-          {
-            "id": "63369e67d3cd5209",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "gitignore - conf.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "gitignore - conf"
+              "title": "workspace"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "modules",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -135,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 317.5
   },
   "right": {
     "id": "ed68407874d3091b",
@@ -237,53 +180,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "63369e67d3cd5209",
+  "active": "2d335c53da543eaf",
   "lastOpenFiles": [
-    "Reserved variables.md",
-    "gitignore - conf.md",
+    "img/project-file-structure.png",
+    "img/apply-command-variants.png",
+    "img/terraform-folder-structure.png",
+    "img/provider-aliases-example.png",
+    "Modules.md.tmp.16024.1021d3405d33",
+    "commands/apply.md.tmp.16024.85dde0c8a6be",
+    "blocks/terraform.md.tmp.16024.ec713a9a3e52",
+    "state.md.tmp.16024.e1442b05e54c",
+    "state.md",
+    "commands/show output.md",
+    "Workspaces.md",
+    "Validations.md",
     "terraform-overview.md",
+    "Reserved variables.md",
+    "remote backend.md",
     "Relative references.md",
-    "Project ideas.md",
     "README.md",
-    "for_each.md",
-    "Commands.md",
+    "Project ideas.md",
+    "Meta-Argument.md",
     "Iterators.md",
+    "gitignore - conf.md",
+    "for_each.md",
+    "Debugging.md",
     "count.md",
-    "Blocks.md",
-    "for_each.md.tmp.24368.a8685eceeddd",
-    "Common files.md",
-    "blocks/locals.md",
-    "providers/Github.md",
-    "providers",
-    "resource.md",
-    "blocks/terraform.md",
-    "blocks/Variables.md",
-    "blocks/resource.md",
-    "blocks/provider.md",
-    "blocks/output.md",
-    "Relative references.md.tmp.24368.2e80c9a2ad68",
-    "Blocks.md.tmp.24368.94611f947afc",
-    "blocks/variable.md.tmp.24368.ae0a5846399d",
-    "Iterators.md.tmp.24368.0ac64f522610",
-    "count.md.tmp.24368.c31b0ed24e51",
-    "for_each.md.tmp.24368.da94471abaab",
-    "locals.md.tmp.24368.9350cd96a847",
-    "Github.md.tmp.24368.c3ee402294bd",
-    "terraform.md",
-    "locals.md",
-    "output.md",
-    "Variables.md",
-    "provider.md",
-    "img/Pasted image 20260608093251.png",
-    "Github.md",
-    "img/Pasted image 20260609122013.png",
-    "img/www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54411581 (4).png",
-    "img/www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54411581 (3).png",
-    "img/www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54411575 (1).png",
-    "img/www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54411575.png",
-    "img/www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_53272265 (2).png",
-    "img/www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_53272265 (2) 1.png",
-    "img/www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54388979 (3) 1.png",
-    "img/www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54388979 (3).png"
+    "Commands.md",
+    "Checks.md",
+    "www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54508289 (2).png",
+    "blocks/check.md.tmp.16024.aca8f540aa58",
+    "Validations.md.tmp.16024.b3bd3e540b7d",
+    "Validations.md.tmp.16024.2a541568619e",
+    "Validations.md.tmp.16024.e77ee6bb9708",
+    "Validations.md.tmp.16024.b7bf2ff229ad",
+    "Validations.md.tmp.16024.c1338b5aa511",
+    "img/debugging-log-core-provider.png",
+    "img/validations-decision-guide.png",
+    "img/check-block-overview.png",
+    "img/postcondition-example-self.png",
+    "img/precondition-example-azure.png",
+    "img/preconditions-postconditions-overview.png",
+    "Workspaces 1.md",
+    "Validations 1.md",
+    "terraform-overview 1.md",
+    "state 1.md",
+    "Reserved variables 1.md",
+    "remote backend 1.md",
+    "Relative references 1.md"
   ]
 }

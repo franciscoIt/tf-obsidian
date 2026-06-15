@@ -14,16 +14,16 @@ resource "random_pet" "name" {
 ```
 
 Value is taken from an environment variable like:
-![[www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54388979 1.png]]
+![[variable-env-var.png]]
 
 if it doesnt exists, it will request to input the value.
 
 # Variable Block
 
-![[www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54411575 (1).png]]
+![[variable-block.png]]
 
 ## Priority
-![[www.udemy.com_course_hashicorp-certified-terraform-associate-004_learn_lecture_54411581 (3).png]]
+![[variable-priority.png]]
 
 ## Referencing
 list --> var.<name>[0]

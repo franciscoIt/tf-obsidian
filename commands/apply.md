@@ -1,6 +1,7 @@
 # apply
 
 Applies the planned changes to reach the desired state. Does not perform *rollbacks*.
+To accept a diff version, use: `terraform apply -refresh-only`
 
 If errors occur:
 1. Already-created resources remain.
@@ -14,3 +15,5 @@ terraform apply tfplan                          # apply a saved plan file
 terraform apply -var="env=prod"                 # pass a variable inline
 terraform apply -target=aws_instance.web        # apply only a specific resource
 ```
+
+![[apply-command-variants.png]]
