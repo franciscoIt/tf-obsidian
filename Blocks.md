@@ -9,9 +9,19 @@
 [[terraform]]  ████                  per project
 [[module]]     ████                  when modularising
 [[import]]     ██                    migration
-[[moved]]      ██                    refactoring
-[[removed]]    ██                    deprecation
-[[check]]      █                     advanced validation
+[[moved]]           ██                    refactoring
+[[removed]]         ██                    deprecation
+[[check]]           █                     advanced validation
+[[meta-arguments]]  █                     resource behaviour
+[[validations]]     █                     input / runtime guards
+
+## Configuration Block Overview
+
+![[moved-removed-import-blocks-overview.png]]
+
+![[moved-removed-block-decision-guide-1.png]]
+
+![[config-blocks-old-vs-new.png]]
 
 ## HCL Syntax
 

@@ -1,6 +1,6 @@
 # Iterators
 
-[[Relative references]]
+[[references]]
 
 | Scenario                          | Use                |
 | --------------------------------- | ------------------ |
