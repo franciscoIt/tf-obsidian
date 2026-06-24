@@ -85,7 +85,7 @@ You want HCP Terraform to automatically detect when someone manually modifies a 
 
 **Response:**
 
-HCP Terraform health assessments automatically monitor your managed infrastructure and detect when real-world resources no longer match your Terraform configuration. Once enabled, health assessments run approximately every 24 hours and include two types of evaluations: drift detection, which compares actual infrastructure against the state file, and continuous validation, which checks whether custom conditions like check blocks, preconditions, and postconditions still pass. Health assessments are available in HCP Terraform Standard and Premium editions and can be enabled per-workspace or enforced organization-wide. If drift is detected, the workspace displays a "Health warning" status and can notify your team.
+HCP Terraform **health assessments** automatically monitor your managed infrastructure and detect when real-world resources no longer match your Terraform configuration. Once enabled, health assessments run approximately every 24 hours and include two types of evaluations: drift detection, which compares actual infrastructure against the state file, and continuous validation, which checks whether custom conditions like check blocks, preconditions, and postconditions still pass. Health assessments are available in HCP Terraform Standard and Premium editions and can be enabled per-workspace or enforced organization-wide. If drift is detected, the workspace displays a "Health warning" status and can notify your team.
 
 ---
 
@@ -98,7 +98,7 @@ The `terraform apply -refresh-only` command queries your cloud provider APIs to 
 
 ---
 
-### 9.
+### 9. checkit
 You are writing a backend configuration block for an S3 remote state. A colleague suggests using `var.bucket_name` inside the `backend` block to make it dynamic. Will this work for your configuration?
 
 **Response:**
@@ -107,7 +107,7 @@ Backend configuration is processed during `terraform init`, which occurs before 
 
 ---
 
-### 10.
+### 10. checkit
 You need to replace an EC2 instance whenever its associated security group changes, but you want to ensure the new instance is fully running before the old one is destroyed. Which `lifecycle` configuration accomplishes this? (select two)
 
 **Response:**
@@ -171,34 +171,34 @@ The correct syntax is `source = "NAMESPACE/NAME/PROVIDER"`. For the official Has
 
 ---
 
-### 15.
+### 15. checkit
 Your platform team has built several reusable Terraform modules. You want to share them with your organization while keeping the source code private. Which HCP Terraform feature should you use so the modules are easily discoverable and consumable right from the HCP Terraform UI?
 
 **Response:**
 
-HCP Terraform's private registry allows organizations to publish, version, and share Terraform modules and providers internally without making them publicly available. Modules are published from your connected VCS repositories, and the registry handles versioning automatically through Git tags. Consumers reference private modules using the source format `app.terraform.io/<ORGANIZATION>/<MODULE_NAME>/<PROVIDER>`, which mirrors the public registry format but with the `app.terraform.io` hostname prefix. The private registry also supports curating public modules, giving organizations a single place to manage both private and approved public components. The registry handles authentication and access through HCP Terraform API tokens, so module consumers don't need direct access to the source repository.
+**HCP Terraform's private registry** allows organizations to publish, version, and share Terraform modules and providers internally without making them publicly available. Modules are published from your connected VCS repositories, and the registry handles versioning automatically through Git tags. Consumers reference private modules using the source format `app.terraform.io/<ORGANIZATION>/<MODULE_NAME>/<PROVIDER>`, which mirrors the public registry format but with the `app.terraform.io` hostname prefix. The private registry also supports curating public modules, giving organizations a single place to manage both private and approved public components. The registry handles authentication and access through HCP Terraform API tokens, so module consumers don't need direct access to the source repository.
 
 ---
 
-### 16.
+### 16. checkit
 Your team is using Terraform to provision infrastructure across multiple cloud providers. Security has mandated that credentials must not be stored locally, should automatically expire, and must never appear in state files. Which approach meets all these requirements?
 
 **Response:**
 
-HashiCorp Vault with secrets engines (AWS, Azure, GCP, etc.) generates dynamic, short-lived credentials that automatically expire, eliminating local credential storage. Combined with `ephemeral` resources (Terraform 1.10+), the credentials are never written to state.
+**HashiCorp Vault** with secrets engines (AWS, Azure, GCP, etc.) generates dynamic, short-lived credentials that automatically expire, eliminating local credential storage. Combined with `ephemeral` resources (Terraform 1.10+), the credentials are never written to state.
 
 ---
 
 ### 17.
-Your networking workspace deploys subnets that your firewall workspace depends on. When new subnets are added, the firewall workspace needs to automatically update its rules. What should you configure?
+Your **networking workspace** deploys subnets that your **firewall workspace** depends on. When new subnets are added, the firewall workspace needs to automatically update its rules. What should you configure?
 
 **Response:**
 
-Run triggers let you connect a downstream workspace to one or more source workspaces so that a successful apply in the source automatically queues a run in the downstream workspace. The key detail is that run triggers are configured in the downstream workspace — the one that needs to react to changes. In this scenario, the firewall workspace is downstream and depends on the networking workspace, so you configure the run trigger in the firewall workspace and specify the networking workspace as the source. When the networking workspace successfully applies new subnets, HCP Terraform automatically queues a run in the firewall workspace to pick up the changes. Each workspace can connect to up to 20 source workspaces.
+Run **triggers** let you connect a downstream workspace to one or more source workspaces so that a successful apply in the source automatically queues a run in the downstream workspace. The key detail is that run triggers are configured in the downstream workspace — the one that needs to react to changes. In this scenario, the firewall workspace is downstream and depends on the networking workspace, so you configure the run trigger in the firewall workspace and specify the networking workspace as the source. When the networking workspace successfully applies new subnets, HCP Terraform automatically queues a run in the firewall workspace to pick up the changes. Each workspace can connect to up to 20 source workspaces.
 
 ---
 
-### 18.
+### 18. checkit
 What type of workflows are available when using HCP Terraform to manage Terraform runs? (select three)
 
 > **Reference:** [UI and VCS-driven run workflow in HCP Terraform | Terraform | HashiCorp Developer](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/run/ui)
@@ -274,3 +274,62 @@ When creating a reusable module, which of the following are best practices? (sel
 **Overall:**
 
 Creating reusable modules requires following several best practices. Input variables should be defined for any values that might differ between environments or use cases — this makes the module flexible and reusable. For example, a networking module should accept VPC CIDR blocks, subnet counts, and region as variables rather than hardcoding them. Output values should expose important resource attributes (like VPC IDs, subnet IDs, security group IDs) so that other modules or the root configuration can use them. Documentation is critical — a well-documented module includes descriptions of what it does, what inputs it requires, what outputs it provides, and usage examples. Provider blocks should NOT be included in reusable modules because this limits flexibility — the calling configuration should configure providers. Hardcoding values defeats the purpose of reusability.
+
+
+![[Pasted image 20260619181659.png]]
+
+
+![[Pasted image 20260619181828.png]]
+https://www.terraform.io/language/expressions/splat 
+
+![[Pasted image 20260619182005.png]]
+
+![[Pasted image 20260619182528.png]]
+https://www.terraform.io/cloud-docs/run/ui#automatically-starting-runs
+
+
+FILL BLANK - **terraform.tfstate**
+
+What is the name of the default file where Terraform stores the state?
+
+Type your answer in the field provided. The text field is not case-sensitive and all variations of the correct answer are accepted.
+![[Pasted image 20260619184313.png]]
+
+You need to constrain the GitHub provider to version 2.1 or greater.
+
+Which of the following should you put into the Terraform 0.12 configuration's provider block?
+
+- [ ] A- version >= 2.1 
+
+- [ ] B- version ~> 2.1
+
+- [ ] C- version = "<= 2.1"
+
+- [ ] D**- version = ">= 2.1"**
+
+The answer is D ">= 2.1". Requires quotes I believe.
+
+![[Pasted image 20260619185605.png]]
+
+![[Pasted image 20260619190215.png]]
+
+![[Pasted image 20260619190943.png]]
+
+![[Pasted image 20260619191714.png]]
+![[Pasted image 20260619191806.png]]
+
+![[Pasted image 20260619192203.png]]
+
+![[Pasted image 20260619192928.png]]
+- By default, when `TF_LOG` is set, Terraform writes these logs to **stderr** (your terminal), not to syslog.
+
+![[Pasted image 20260619193017.png]]
+
+![[Pasted image 20260619193438.png]]
+
+![[Pasted image 20260619193524.png]]
+
+![[Pasted image 20260619193604.png]]
+https://www.terraform.io/language/functions
+
+![[Pasted image 20260619193703.png]]

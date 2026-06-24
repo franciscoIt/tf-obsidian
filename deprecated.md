@@ -1,0 +1,1 @@
+terraform taint = apply - `terraform apply -replace="null_resource.run_script"` 

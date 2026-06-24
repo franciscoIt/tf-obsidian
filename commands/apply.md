@@ -16,4 +16,9 @@ terraform apply -var="env=prod"                 # pass a variable inline
 terraform apply -target=aws_instance.web        # apply only a specific resource
 ```
 
-![[apply-command-variants.png]]
+
+||`-replace`|`-target`|
+|---|---|---|
+|**Purpose**|_How_ a resource is updated (destroy + recreate)|_Which_ resources are included in the operation|
+|**Scope**|Runs a full plan, but marks one resource for replacement|Narrows the plan to only the targeted resource(s)|
+|**Other resources**|All resources are evaluated normally|Everything outside the target is **ignored**|

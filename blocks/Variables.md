@@ -1,4 +1,4 @@
-
+The name of a variable can be any valid identifier except the following: **source, version, providers, count, for_each, lifecycle, depends_on, locals.**
 # Variables
 
 ```yaml
